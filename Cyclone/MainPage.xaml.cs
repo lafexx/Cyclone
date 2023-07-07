@@ -6,8 +6,8 @@ public partial class MainPage : ContentPage
 	public MainPage()
 	{
 		InitializeComponent();
-		WeatherApi.InitaliseClient();
-		GetWeather("Sydney");
+		//WeatherApi.InitaliseClient();
+		//GetWeather("Sydney");
 	}
 
 	public async void GetWeather(string Location)

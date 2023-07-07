@@ -11,18 +11,16 @@
                 <Grid RowDefinitions="Auto, Auto, Auto, Auto" ColumnDefinitions="*, *">
                     <Label x:Name="weatherCity" Grid.Row="0" Grid.ColumnSpan="2" Text="City" TextColor="White" FontAttributes="Bold" FontSize="30" HorizontalOptions="Center" Margin="0,30,0,0"/>
                     <Label x:Name="weatherRegionAndCountry" Grid.Row="1" Grid.ColumnSpan="2" Text="Region," TextColor="White" FontSize="20" HorizontalOptions="Center" Padding="0,0,2,0"/>
-                    <Image x:Name="weatherConditionIcon" Source="https://cdn.weatherapi.com/weather/64x64/day/116.png" Grid.Row="2" Grid.Column="0" HorizontalOptions="End"/>
+                    <Image x:Name="weatherConditionIcon" Source="https://cdn.weatherapi.com/weather/64x64/day/116.png" Grid.Row="2" Grid.Column="0" Aspect="Fill" WidthRequest="85" Margin="0,15,0,-15" HorizontalOptions="End"/>
                     <Label x:Name="weatherTemp" Grid.Row="2" Grid.Column="1" Text="0ºC" TextColor="White" FontAttributes="Bold" FontSize="45" HorizontalOptions="Start" Padding="0,30,0,0"/>
                     <Label x:Name="weatherConditionText" Grid.Row="3" Grid.ColumnSpan="2" Text="Partly Cloudy" TextColor="White" FontAttributes="Bold" FontSize="18" HorizontalOptions="Center"/>
                 </Grid>
             </StackLayout>
-            <Grid RowDefinitions="100, 100, 100" ColumnDefinitions="*, *, *" Padding="25" VerticalOptions="End">
+            <Grid RowDefinitions="300, 100, 100" ColumnDefinitions="*, *, *" Padding="25,-50" VerticalOptions="End">
                 <Button Grid.Row="0" Grid.ColumnSpan="2" Background="PaleGreen"/>
                 <Button Grid.Row="0" Grid.Column="2" Background="PaleTurquoise"/>
-                <Button Grid.Row="1" Grid.ColumnSpan="3" Background="PaleVioletRed"/>
-                <Button Grid.Row="2" Grid.Column="0" Background="PaleGoldenrod"/>
-                <Button Grid.Row="2" Grid.Column="1" Background="PaleGoldenrod"/>
-                <Button Grid.Row="2" Grid.Column="2" Background="PaleGoldenrod"/>
+                <Button Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Background="PaleVioletRed"/>
+                <Button Grid.Row="1" Grid.Column="0" Background="PaleGoldenrod"/>
             </Grid>
         </Grid>
     </ScrollView>
