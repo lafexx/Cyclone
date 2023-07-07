@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Cyclone.MainPage"
+             Shell.BackgroundColor="Black">
+
+    <ScrollView>
+        <Grid RowDefinitions="*, Auto" ColumnDefinitions="*">
+            <BoxView Background="#28234b"/>
+            <StackLayout Spacing="2">
+                <Label x:Name="weatherCity"  Text="City" TextColor="White" FontAttributes="Bold" FontSize="35" HorizontalOptions="Center" Margin="0,30,0,0"/>
+                <Label x:Name="weatherTemp"  Text="0ºC" TextColor="White" FontAttributes="Bold" FontSize="35" HorizontalOptions="Center"/>
+            </StackLayout>
+            <Grid RowDefinitions="100, 100, 100" ColumnDefinitions="*, *, *" Padding="25" VerticalOptions="End">
+                <Button Grid.Row="0" Grid.ColumnSpan="2" Background="PaleGreen"/>
+                <Button Grid.Row="0" Grid.Column="2" Background="PaleTurquoise"/>
+                <Button Grid.Row="1" Grid.ColumnSpan="3" Background="PaleVioletRed"/>
+                <Button Grid.Row="2" Grid.Column="0" Background="PaleGoldenrod"/>
+                <Button Grid.Row="2" Grid.Column="1" Background="PaleGoldenrod"/>
+                <Button Grid.Row="2" Grid.Column="2" Background="PaleGoldenrod"/>
+            </Grid>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
+
