@@ -8,8 +8,13 @@
         <Grid RowDefinitions="*, Auto" ColumnDefinitions="*">
             <BoxView Background="#28234b"/>
             <StackLayout Spacing="2">
-                <Label x:Name="weatherCity"  Text="City" TextColor="White" FontAttributes="Bold" FontSize="35" HorizontalOptions="Center" Margin="0,30,0,0"/>
-                <Label x:Name="weatherTemp"  Text="0ºC" TextColor="White" FontAttributes="Bold" FontSize="35" HorizontalOptions="Center"/>
+                <Grid RowDefinitions="Auto, Auto, Auto, Auto" ColumnDefinitions="*, *">
+                    <Label x:Name="weatherCity" Grid.Row="0" Grid.ColumnSpan="2" Text="City" TextColor="White" FontAttributes="Bold" FontSize="30" HorizontalOptions="Center" Margin="0,30,0,0"/>
+                    <Label x:Name="weatherRegionAndCountry" Grid.Row="1" Grid.ColumnSpan="2" Text="Region," TextColor="White" FontSize="20" HorizontalOptions="Center" Padding="0,0,2,0"/>
+                    <Image x:Name="weatherConditionIcon" Source="https://cdn.weatherapi.com/weather/64x64/day/116.png" Grid.Row="2" Grid.Column="0" HorizontalOptions="End"/>
+                    <Label x:Name="weatherTemp" Grid.Row="2" Grid.Column="1" Text="0ºC" TextColor="White" FontAttributes="Bold" FontSize="45" HorizontalOptions="Start" Padding="0,30,0,0"/>
+                    <Label x:Name="weatherConditionText" Grid.Row="3" Grid.ColumnSpan="2" Text="Partly Cloudy" TextColor="White" FontAttributes="Bold" FontSize="18" HorizontalOptions="Center"/>
+                </Grid>
             </StackLayout>
             <Grid RowDefinitions="100, 100, 100" ColumnDefinitions="*, *, *" Padding="25" VerticalOptions="End">
                 <Button Grid.Row="0" Grid.ColumnSpan="2" Background="PaleGreen"/>

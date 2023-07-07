@@ -4,15 +4,11 @@ namespace Cyclone
 {
 	public static class WeatherApi
 	{
-		public static HttpClient weatherApiClient;
+		public static HttpClient client;
 
-		static WeatherApi()
+		public static void InitaliseClient()
 		{
-			weatherApiClient = new HttpClient
-			{
-				BaseAddress = new Uri("https://api.weatherapi.com/v1/current.json?key=APIKeyHere&q=")
-			}; // initialising new client
-
+			client = new HttpClient();
         }
 	}
 }
