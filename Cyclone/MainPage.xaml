@@ -5,9 +5,13 @@
              Shell.BackgroundColor="Black">
 
     <ScrollView>
+        <!-- Whole screen grid -->
         <Grid RowDefinitions="*, Auto" ColumnDefinitions="*">
+             <!-- Background -->
             <BoxView Background="#28234b"/>
-            <StackLayout Spacing="2">
+
+            <!-- Basic Information Grid -->
+            <StackLayout Spacing="2"> 
                 <Grid RowDefinitions="Auto, Auto, Auto, Auto" ColumnDefinitions="*, *">
                     <Label x:Name="weatherCity" Grid.Row="0" Grid.ColumnSpan="2" Text="City" TextColor="White" FontAttributes="Bold" FontSize="30" HorizontalOptions="Center" Margin="0,30,0,0"/>
                     <Label x:Name="weatherRegionAndCountry" Grid.Row="1" Grid.ColumnSpan="2" Text="Region," TextColor="White" FontSize="20" HorizontalOptions="Center" Padding="0,0,2,0"/>
@@ -17,23 +21,32 @@
                 </Grid>
             </StackLayout>
 
-            <Grid RowDefinitions="300, 100, 100" ColumnDefinitions="*, *, *" Padding="25,-40" VerticalOptions="End">
-                <StackLayout Grid.Row="0" Grid.ColumnSpan="3" Spacing="3">
-                    <Line StrokeLineCap="Round" Stroke="#242424" X2="350" HorizontalOptions="Center"/>
-                    <Label x:Name="weatherWindSpeed" Text="Wind Speed: 10km/h" TextColor="LightGray" FontSize="17" HorizontalOptions="Start" Padding="0,30,0,0"/>
-                    <Label x:Name="weatherWindDegree" Text="Wind Degree: 21.5º" TextColor="LightGray" FontSize="17" HorizontalOptions="Start"/>
-                    <Label x:Name="weatherWindDirection" Text="Wind Direction: NWE" TextColor="LightGray" FontSize="17" HorizontalOptions="Start"/>
+            <!-- Bottom Grid -->
+            <Grid RowDefinitions="Auto, 100, 100" ColumnDefinitions="*, *, *" Padding="25,-40" VerticalOptions="End">
 
-                    <Label x:Name="weatherAirPressure" Text="Air Pressure: 0.12in" TextColor="LightGray" FontSize="17" HorizontalOptions="Start" Padding="0,15,0,0"/>
-                    <Label x:Name="weatherPrecip" Text="Precipitation: 1mm" TextColor="LightGray" FontSize="17" HorizontalOptions="Start"/>
-                    <Label x:Name="weatherHumidity" Text="Humidity: 0.3" TextColor="LightGray" FontSize="17" HorizontalOptions="Start"/>
+                <!-- Advanced Information Grid -->                     
+                <Grid Grid.Row="0" Grid.ColumnSpan="3" RowDefinitions="Auto" ColumnDefinitions="*, *">
+                    <!-- Left side -->
+                    <StackLayout Grid.Row="0" Grid.ColumnSpan="2">
+                        <Line StrokeLineCap="Round" Stroke="#242424" X2="350" HorizontalOptions="Center"/>
+                        <Label x:Name="weatherWindSpeed" Text="Wind Speed: 10km/h" TextColor="LightGray" FontSize="15" HorizontalOptions="Start" Padding="0,15,0,0"/>
+                        <Label x:Name="weatherWindDegree" Text="Wind Degree: 21.5º" TextColor="LightGray" FontSize="15" HorizontalOptions="Start"/>
+                        <Label x:Name="weatherWindDirection" Text="Wind Direction: NWE" TextColor="LightGray" FontSize="15" HorizontalOptions="Start"/>
+                        <Label x:Name="weatherUV" Text="UV: 0.2" TextColor="LightGray" FontSize="15" HorizontalOptions="Start" Padding="0,0,0,15"/>
+                    </StackLayout>
 
-                    <Label x:Name="weatherUV" Text="UV: 0.2" TextColor="LightGray" FontSize="17" HorizontalOptions="Start" Padding="0,15,0,0"/>
-                    <Label x:Name="weatherVisibility" Text="Visibility: 10km" TextColor="LightGray" FontSize="17" HorizontalOptions="Start"/>
+                    <!-- Right side -->
+                    <StackLayout Grid.Row="0" Grid.Column="2">
+                        <Label x:Name="weatherAirPressure" Text="Air Pressure: 0.12in" TextColor="LightGray" FontSize="15" HorizontalOptions="Start" Padding="0,15,0,0"/>
+                        <Label x:Name="weatherPrecip" Text="Precipitation: 1mm" TextColor="LightGray" FontSize="15" HorizontalOptions="Start"/>
+                        <Label x:Name="weatherHumidity" Text="Humidity: 0.3" TextColor="LightGray" FontSize="15" HorizontalOptions="Start"/>         
+                        <Label x:Name="weatherVisibility" Text="Visibility: 10km" TextColor="LightGray" FontSize="15" HorizontalOptions="Start" Padding="0,0,0,15"/>
+                    </StackLayout>
+                </Grid>
 
-                </StackLayout>
-                
+                <!-- Refresh Button WIP -->
                 <Button Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Background="PaleVioletRed"/>
+                <!-- Footer Information WIP -->
                 <Button Grid.Row="1" Grid.Column="0" Background="PaleGoldenrod"/>
             </Grid>
         </Grid>

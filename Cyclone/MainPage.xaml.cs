@@ -12,7 +12,7 @@ public partial class MainPage : ContentPage
 
 	public async void GetWeather(string Location)
 	{
-		string json = await WeatherApi.client.GetStringAsync($"https://api.weatherapi.com/v1/current.json?key=c0074171cefb4be1b20180157230707&q={Location}&aqi=no");
+		string json = await WeatherApi.client.GetStringAsync($"https://api.weatherapi.com/v1/current.json?key=APIKEYHERE&q={Location}&aqi=no");
         WeatherModel weather = JsonConvert.DeserializeObject<WeatherModel>(json);
         weatherCity.Text = $"{weather.location.name}";
         weatherRegionAndCountry.Text = $"{weather.location.region}, {weather.location.country}";
