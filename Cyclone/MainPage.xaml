@@ -24,12 +24,12 @@
 
                     <Image Grid.Row="4" Grid.Column="0" Aspect="Fill" WidthRequest="85" Margin="0,15,0,-15" HorizontalOptions="End">
                         <Image.Source>
-                            <UriImageSource x:Name="weatherConditionIcon"  Uri="https://cdn.weatherapi.com/weather/64x64/day/116.png"  CachingEnabled="True" CacheValidity="1"/>
+                            <UriImageSource x:Name="weatherConditionIcon" Uri="https://cdn.weatherapi.com/weather/64x64/day/116.png"  CachingEnabled="True" CacheValidity="1"/>
                         </Image.Source>
                     </Image>
 
                     <Label x:Name="weatherTemp" Grid.Row="4" Grid.Column="1" Text="0ºC" TextColor="White" FontAttributes="Bold" FontSize="45" HorizontalOptions="Start" Padding="0,30,0,0"/>
-                    <Label x:Name="weatherConditionText" Grid.Row="5" Grid.ColumnSpan="2" Text="Partly Cloudy" TextColor="White" FontAttributes="Bold" FontSize="18" HorizontalOptions="Center"/>
+                    <Label x:Name="weatherConditionText" Grid.Row="5" Grid.ColumnSpan="2" Text="Mostly Cloudy" TextColor="White" FontAttributes="Bold" FontSize="18" HorizontalOptions="Center"/>
                 </Grid>
             </StackLayout>
 
