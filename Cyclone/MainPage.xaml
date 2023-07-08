@@ -12,11 +12,11 @@
 
             <!-- Basic Information Grid -->
             <StackLayout Spacing="2"> 
-                <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="*, *">
+                <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="*, *" Margin="0,-60,0,0">
                     <!-- Search Bar -->                    
-                    <SearchBar x:Name="locationSearchBar" Grid.Row="0" Grid.ColumnSpan="2" SearchButtonPressed="SearchLocation"  Placeholder="Enter location..." TextColor="White"  Background="#141414" Margin="0,20,0,0"/>
+                    <SearchBar x:Name="locationSearchBar" Grid.Row="0" Grid.ColumnSpan="2" SearchButtonPressed="SearchLocation"  Placeholder="Enter location..." TextColor="White"  Background="#141414" Margin="0,80,0,0"/>
                     <!-- Search Results -->
-                    <ListView x:Name="locationSearchResults" Grid.Row="1" Grid.ColumnSpan="2"/>
+                    <ListView x:Name="locationSearchResults" Grid.Row="1" Grid.ColumnSpan="2" Margin="0,60,0,0"/>
 
                     <!-- Basic Weather Information -->
                     <Label x:Name="weatherCity" Grid.Row="2" Grid.ColumnSpan="2" Text="City" TextColor="White" FontAttributes="Bold" FontSize="30" HorizontalOptions="Center" Margin="0,30,0,0"/>
@@ -49,15 +49,21 @@
 
                     <!-- Avanced Info Right side -->
                     <StackLayout Grid.Row="0" Grid.Column="2">
-                        <Label x:Name="weatherAirPressure" Text="Air Pressure: 0.12in" TextColor="LightGray" FontSize="15" HorizontalOptions="Start" Padding="0,15,0,0"/>
-                        <Label x:Name="weatherPrecip" Text="Precipitation: 1mm" TextColor="LightGray" FontSize="15" HorizontalOptions="Start"/>
-                        <Label x:Name="weatherHumidity" Text="Humidity: 0.3" TextColor="LightGray" FontSize="15" HorizontalOptions="Start"/>         
-                        <Label x:Name="weatherVisibility" Text="Visibility: 10km" TextColor="LightGray" FontSize="15" HorizontalOptions="Start" Padding="0,0,0,15"/>
+                        <Label x:Name="weatherAirPressure" Text="Air Pressure: 0.12in" TextColor="LightGray" FontSize="15" HorizontalOptions="End" Padding="0,15,0,0"/>
+                        <Label x:Name="weatherPrecip" Text="Precipitation: 1mm" TextColor="LightGray" FontSize="15" HorizontalOptions="End"/>
+                        <Label x:Name="weatherHumidity" Text="Humidity: 0.3" TextColor="LightGray" FontSize="15" HorizontalOptions="End"/>         
+                        <Label x:Name="weatherVisibility" Text="Visibility: 10km" TextColor="LightGray" FontSize="15" HorizontalOptions="End" Padding="0,0,0,15"/>
                     </StackLayout>
                 </Grid>
 
-                <!-- Footer Information WIP -->
-                <Button Grid.Row="1" Grid.ColumnSpan="3" Background="PaleGoldenrod"/>
+                <!-- Footer Information -->
+                <StackLayout Grid.Row="1" Grid.ColumnSpan="3" VerticalOptions="End">
+                    <Grid RowDefinitions="Auto, Auto, Auto" ColumnDefinitions="*">
+                        <Label Grid.Row="0" Grid.Column="0" HorizontalOptions="Start"  Text="github.com/lafexx" TextColor="WhiteSmoke"/>
+                        <Label Grid.Row="0" Grid.Column="1" HorizontalOptions="Center"  Text="" TextColor="WhiteSmoke"/>
+                        <Label Grid.Row="0" Grid.Column="2" HorizontalOptions="End"  Text="© lafetype 2023" TextColor="WhiteSmoke"/>
+                    </Grid>
+                </StackLayout>
             </Grid>
         </Grid>
     </ScrollView>
