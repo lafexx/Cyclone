@@ -16,9 +16,24 @@
                     <Label x:Name="weatherConditionText" Grid.Row="3" Grid.ColumnSpan="2" Text="Partly Cloudy" TextColor="White" FontAttributes="Bold" FontSize="18" HorizontalOptions="Center"/>
                 </Grid>
             </StackLayout>
-            <Grid RowDefinitions="300, 100, 100" ColumnDefinitions="*, *, *" Padding="25,-50" VerticalOptions="End">
-                <Button Grid.Row="0" Grid.ColumnSpan="2" Background="PaleGreen"/>
-                <Button Grid.Row="0" Grid.Column="2" Background="PaleTurquoise"/>
+
+            <Grid RowDefinitions="300, 100, 100" ColumnDefinitions="*, *, *" Padding="25,-40" VerticalOptions="End">
+                <StackLayout Grid.Row="0" Grid.ColumnSpan="3" Spacing="3">
+                    <Line StrokeLineCap="Round" Stroke="#242424" X2="350" HorizontalOptions="Center"/>
+                    <Label x:Name="weatherWindSpeed" Text="Wind Speed: 10km/h" TextColor="LightGray" FontSize="17" HorizontalOptions="Start" Padding="0,30,0,0"/>
+                    <Label x:Name="weatherWindDegree" Text="Wind Degree: 21.5º" TextColor="LightGray" FontSize="17" HorizontalOptions="Start"/>
+                    <Label x:Name="weatherWindDirection" Text="Wind Direction: NWE" TextColor="LightGray" FontSize="17" HorizontalOptions="Start"/>
+
+                    <Label x:Name="weatherAirPressure" Text="Air Pressure: 0.12in" TextColor="LightGray" FontSize="17" HorizontalOptions="Start" Padding="0,15,0,0"/>
+                    <Label x:Name="weatherPrecip" Text="Precipitation: 1mm" TextColor="LightGray" FontSize="17" HorizontalOptions="Start"/>
+                    <Label x:Name="weatherHumidity" Text="Humidity: 0.3" TextColor="LightGray" FontSize="17" HorizontalOptions="Start"/>
+
+                    <Label x:Name="weatherUV" Text="UV: 0.2" TextColor="LightGray" FontSize="17" HorizontalOptions="Start" Padding="0,15,0,0"/>
+                    <Label x:Name="weatherVisibility" Text="Visibility: 10km" TextColor="LightGray" FontSize="17" HorizontalOptions="Start"/>
+
+                </StackLayout>
+                
+
                 <Button Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Background="PaleVioletRed"/>
                 <Button Grid.Row="1" Grid.Column="0" Background="PaleGoldenrod"/>
             </Grid>
