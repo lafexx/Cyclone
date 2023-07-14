@@ -7,4 +7,4 @@ Cyclone is a cross-platform weather app developed in C# using .NET Maui.
 - Cross Platform
 - Responsive Design
 ---
-<img src="./Cyclone.png" width="185" height="400"/> 
+<img src="./CycloneIMG.png" width="185" height="400"/> 
