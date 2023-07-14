@@ -39,7 +39,7 @@ public partial class MainPage : ContentPage
         if (weather == null)
             return;
 
-        weatherConditionIcon.Uri = new Uri(weather.current.condition.icon);
+        //weatherConditionIcon.Uri = new Uri(weather.current.condition.icon);
 
         #region Setting Weather Information
         // Setting the basic weather information
