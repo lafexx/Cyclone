@@ -1,6 +1,4 @@
-﻿
-
-namespace Cyclone
+﻿namespace Cyclone
 {
 	public static class WeatherApi
 	{
