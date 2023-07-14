@@ -12,7 +12,7 @@
 
             <!-- Basic Information Grid -->
             <StackLayout Spacing="2">
-                <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="*, *">
+                <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="*, *">
 
                     <StackLayout Grid.Row="0" Grid.ColumnSpan="2" HorizontalOptions="Center" WidthRequest="300">
                         <!-- Search Bar -->
@@ -33,6 +33,7 @@
 
                     <Label x:Name="weatherTemp" Grid.Row="4" Grid.Column="1" Text="11ºC" TextColor="#353535" FontAttributes="Bold" FontSize="45" HorizontalOptions="Start" Padding="0,30,0,0"/>
                     <Label x:Name="weatherConditionText" Grid.Row="5" Grid.ColumnSpan="2" Text="Partly Cloudy" TextColor="#545454" FontAttributes="None" FontSize="18" HorizontalOptions="Center"/>
+                    <ImageButton x:Name="MoreInfoButton" Clicked="RedirectToAdvanced"  Grid.Row="6" Grid.ColumnSpan="2" Source="moreinfo.png" HorizontalOptions="Center" WidthRequest="48" Margin="0,15,0,0"/>
                 </Grid>
             </StackLayout>
 

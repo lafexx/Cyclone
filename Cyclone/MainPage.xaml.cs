@@ -1,5 +1,6 @@
 ﻿namespace Cyclone;
 using Newtonsoft.Json;
+using Cyclone.Pages;
 
 public partial class MainPage : ContentPage
 {
@@ -57,6 +58,11 @@ public partial class MainPage : ContentPage
 		string searchQuery = locationSearchBar.Text;
 		// Get the weather
 		GetWeather(searchQuery);
+    }
+
+    void RedirectToAdvanced(System.Object sender, System.EventArgs e)
+    {
+        Navigation.PushModalAsync(new AdvancedPage());
     }
 }
 
