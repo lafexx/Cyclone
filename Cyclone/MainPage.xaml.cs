@@ -1,6 +1,8 @@
 ﻿namespace Cyclone;
 using Newtonsoft.Json;
 using Cyclone.Pages;
+using System.Net;
+using System.IO.Compression;
 
 public partial class MainPage : ContentPage
 {
@@ -44,8 +46,10 @@ public partial class MainPage : ContentPage
         if (weather == null)
             return;
 
-        // TODO: Bugged, wont show weather condition icon 
-        //weatherConditionIcon.Uri = new Uri(weather.current.condition.icon);
+        // TODO: Bugged, wont show weather condition icon  !!!! <<
+        //weatherConditionIcon. = new Uri(weather.current.condition.icon);
+        weatherConditionIcon.Source = new Uri($"{weather.current.condition.icon}");
+
 
         #region Setting Weather Information
         // Setting the basic weather information
