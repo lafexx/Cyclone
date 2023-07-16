@@ -13,11 +13,16 @@ public partial class MainPage : ContentPage
 		GetWeather("Sydney");
 	}
 
-	public async void GetWeather(string Location)
+    /// <summary>
+    /// Fetches the weather data from the API, deserializes it to a class and updates the info on screen.
+    /// </summary>
+    /// <param name="Location"></param>
+    /// <param name="force"></param>
+	public async void GetWeather(string Location, bool force = false)
 	{
 		WeatherModel weather = null;
 
-		if (WeatherApi.weather == null)
+		if (WeatherApi.weather == null || force)
         {
             try
             {
@@ -39,6 +44,7 @@ public partial class MainPage : ContentPage
         if (weather == null)
             return;
 
+        // TODO: Bugged, wont show weather condition icon 
         //weatherConditionIcon.Uri = new Uri(weather.current.condition.icon);
 
         #region Setting Weather Information
@@ -50,14 +56,24 @@ public partial class MainPage : ContentPage
         #endregion 
     }
 
+    /// <summary>
+    /// Gets the weather at the location specified in the search bar
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     public void SearchLocation(System.Object sender, System.EventArgs e)
     {
 		// Get the text input
 		string searchQuery = locationSearchBar.Text;
 		// Get the weather
-		GetWeather(searchQuery);
+		GetWeather(searchQuery, true);
     }
 
+    /// <summary>
+    /// Changes to the advanced weather information page
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     void RedirectToAdvanced(System.Object sender, System.EventArgs e)
     {
         Navigation.PushModalAsync(new AdvancedPage());
