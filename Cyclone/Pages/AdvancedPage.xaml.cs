@@ -17,7 +17,7 @@ public partial class AdvancedPage : ContentPage
             // Setting the advanced weather information
             weatherAirPressure.Text = $"Air Pressure: {weather.current.pressure_in}";
             weatherWindSpeed.Text = $"Wind Speed: {weather.current.wind_kph}km/h";
-            weatherWindDegree.Text = $"Wind Degree: {weather.current.wind_degree}�";
+            weatherWindDegree.Text = $"Wind Degree: {weather.current.wind_degree}°";
             weatherWindDirection.Text = $"Wind Direction: {weather.current.wind_dir}";
             weatherPrecip.Text = $"Precipitation: {weather.current.precip_mm}mm";
             weatherHumidity.Text = $"Humidity: {weather.current.humidity}";
