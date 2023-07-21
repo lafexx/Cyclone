@@ -25,7 +25,7 @@
                     <Label x:Name="weatherCity" Grid.Row="2" Grid.ColumnSpan="2" Text="Sydney" TextColor="#353535" FontAttributes="Bold" FontSize="30" HorizontalOptions="Center" Margin="0,30,0,0"/>
                     <Label x:Name="weatherRegionAndCountry" Grid.Row="3" Grid.ColumnSpan="2" Text="New South Wales, Australia" TextColor="#545454" FontSize="20" HorizontalOptions="Center" Padding="0,0,2,0"/>
 
-                    <Image x:Name="weatherConditionIcon" Source="cdn.weatherapi.com/weather/64x64/day/116.png"  Grid.Row="4" Grid.Column="0" Aspect="Fill" WidthRequest="85" Margin="0,15,0,-15" HorizontalOptions="End"/>
+                    <Image x:Name="weatherConditionIcon" Source="https://cdn.weatherapi.com/weather/64x64/day/116.png"  Grid.Row="4" Grid.Column="0" Aspect="Fill" WidthRequest="85" Margin="0,15,0,-15" HorizontalOptions="End"/>
 
                     <Label x:Name="weatherTemp" Grid.Row="4" Grid.Column="1" Text="11ºC" TextColor="#353535" FontAttributes="Bold" FontSize="45" HorizontalOptions="Start" Padding="0,30,0,0"/>
                     <Label x:Name="weatherConditionText" Grid.Row="5" Grid.ColumnSpan="2" Text="Partly Cloudy" TextColor="#545454" FontAttributes="None" FontSize="18" HorizontalOptions="Center"/>
