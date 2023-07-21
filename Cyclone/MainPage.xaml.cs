@@ -1,8 +1,6 @@
 ﻿namespace Cyclone;
 using Newtonsoft.Json;
 using Cyclone.Pages;
-using System.Net;
-using System.IO.Compression;
 
 public partial class MainPage : ContentPage
 {
